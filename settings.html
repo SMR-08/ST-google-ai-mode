@@ -1,0 +1,20 @@
+<div class="inline-drawer">
+    <div class="inline-drawer-toggle inline-drawer-header">
+        <b>Google AI Mode MCP</b>
+        <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+    </div>
+    <div class="inline-drawer-content">
+        <label for="gam_mcp_url">URL del puente MCP</label>
+        <input id="gam_mcp_url" class="text_pole" type="url" placeholder="http://100.64.0.13:32152" autocomplete="off">
+        <label for="gam_mcp_token">Token</label>
+        <input id="gam_mcp_token" class="text_pole" type="password" autocomplete="off">
+        <label class="checkbox_label" for="gam_mcp_enabled">
+            <input id="gam_mcp_enabled" type="checkbox">
+            <span>Activar function tools</span>
+        </label>
+        <button id="gam_mcp_save" class="menu_button">Guardar y descubrir tools</button>
+        <div id="gam_mcp_status" role="status">Sin conectar.</div>
+        <div id="gam_mcp_tools"></div>
+        <small>También activa «Enable function calling» en AI Response Configuration.</small>
+    </div>
+</div>
