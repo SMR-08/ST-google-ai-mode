@@ -2,7 +2,7 @@
   "display_name": "Google AI Mode MCP",
   "loading_order": 100,
   "js": "index.js",
-  "author": "mht",
+  "author": "Community",
   "version": "1.0.0",
   "auto_update": false
 }

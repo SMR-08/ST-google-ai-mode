@@ -1,7 +1,15 @@
 import { renderExtensionTemplateAsync } from '../../../extensions.js';
 
+const EXTENSION_DIR_NAME = 'ST-google-ai-mode';
 const MODULE_NAME = 'google_ai_mode_mcp';
-const EXTENSION_PATH = 'third-party/SillyTavern-Google-AI-Mode';
+const EXTENSION_PATH = (function() {
+    try {
+        const url = import.meta.url;
+        const match = url.match(/\/scripts\/extensions\/(.*?)\/[^\/]+$/);
+        if (match && match[1]) return match[1];
+    } catch {}
+    return `third-party/${EXTENSION_DIR_NAME}`;
+})();
 const defaults = Object.freeze({ url: '', token: '', enabled: true, tools: {} });
 let tools = [];
 const registered = new Set();
